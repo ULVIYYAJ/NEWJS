@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bonadea.scss">
+    <link rel="stylesheet" href="bonadea.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-replace-svg="nest"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="bonadea.js"></script>
+</head>
+
+<body>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">NAME</th>
+                <th scope="col">SURNAME</th>
+                <th scope="col">PHONE</th>
+                <th scope="col">EMAIL</th>
+                <th scope="col">PINCODE</th>
+                <th scope="col">ADDRESS</th>
+                <th scope="col">CITY</th>
+                <th scope="col">DATEBIRTH</th>
+                <th scope="col">STATUS</th>
+                <th scope="col">GENDER</th>
+                <th scope="col">DELETE</th>
+                <th scope="col">CHEMISTRY</th>
+            </tr>
+        </thead>
+        <tbody id="users">
+            <tr>
+
+            </tr>
+        </tbody>
+        <div id="plus">
+            <!-- <i class="fas fa-plus"></i> -->
+            <p>Add patient</p>
+        </div>
+    </table>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Patient Information</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-6">
+                            <input type="text" id="name" class="percent form-control" placeholder="Name">
+                        </div>
+                        <div class="col-6">
+                            <input type="text" id="surname" class="percent form-control" placeholder="Surname">
+                        </div>
+                        <div class="col-6">
+                            <input type="text" id="phone" class="percent form-control" placeholder="Phone">
+                        </div>
+                        <div class="col-6">
+                            <input type="email" id="email" class="percent form-control" placeholder="Email">
+                        </div>
+                        <div class="col-6">
+                            <input type="text" id="pincode" class="percent form-control" placeholder="Pincode">
+                        </div>
+                        <div class="col-6">
+                            <input type="text" id="address" class="percent form-control" placeholder="Address">
+                        </div>
+                        <div class="col-6">
+                            <input type="text" id="city" class="percent form-control" placeholder="City">
+                        </div>
+                        <div class="col-6">
+                            <input type="date" id="date" class="percent form-control" placeholder="Date">
+                        </div>
+                        <div class="col-6">
+                            <select id="status">
+                                <option value="1">Single</option>
+                                <option value="2">Married</option>
+                            </select>
+                        </div>
+                        <div class="col-6">
+                            <select id="gender">
+                                <option value="1">Male</option>
+                                <option value="1">Female</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn save btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="modal fade" id="newModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Departments</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <select id="department">
+
+                    </select>
+
+                    <ul id="sectors">
+
+                    </ul>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn show btn-primary">Show</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
